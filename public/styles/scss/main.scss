@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #000;
   margin: 0;
@@ -60,16 +66,19 @@ body {
         justify-content: center;
         padding: 2px 0;
         width: 100%;
-        background-color: #d6d6d6;
+        background-color: #fff;
         border-top-right-radius: 4px;
         border-top-left-radius: 4px;
-        transition: background-color ease 300ms;
-        &::selection {
-          background-color: none;
-        }
+
+        opacity: 0.5;
+        transition: opacity ease 300ms;
 
         &:hover {
-          background-color: #fff;
+          opacity: 1;
+        }
+
+        &::selection {
+          background-color: none;
         }
       }
     }

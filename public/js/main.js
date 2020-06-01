@@ -1,6 +1,7 @@
 const player = videojs('video', {
   autoplay: 'muted',
   preload: 'auto',
+  errorDisplay: false,
 });
 player.httpSourceSelector();
 
@@ -18,12 +19,15 @@ const dragLempiank = {
   container: document.querySelector('#twitch-video'),
   dragBar: document.querySelector('#twitch-video-drag'),
   active: false,
-  initialX: 0,
-  initialY: 100,
-  currentX: 0,
-  currentY: 100,
+  initialX: localStorage.getItem('initialX') || 0,
+  initialY: localStorage.getItem('initialY') || 100,
+  currentX: this.initialX,
+  currentY: this.initialY,
 
   init: function () {
+    this.container.style.left = `${this.initialX}px`;
+    this.container.style.top = `${this.initialY}px`;
+
     this.dragBar.addEventListener('touchstart', this.dragStart, false);
     this.dragBar.addEventListener('touchend', this.dragEnd, false);
     this.dragBar.addEventListener('touchmove', this.drag, false);
@@ -69,10 +73,15 @@ const dragLempiank = {
   },
 
   dragEnd: function (e) {
+    let bar = document.querySelector('#twitch-video-drag');
+
     this.initialX = this.currentX;
     this.initialY = this.currentY;
 
     this.active = false;
+
+    localStorage.setItem('initialX', this.currentX - bar.offsetWidth / 2);
+    localStorage.setItem('initialY', this.currentY - bar.offsetHeight / 2);
   },
 };
 
