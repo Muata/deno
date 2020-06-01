@@ -6,7 +6,10 @@ services:
     volumes:
       - ./server.ts:/server.ts
       - ./public:/public
+
+
+
 networks:
-  default:
-      external:
-        name: nginx-proxy
+    default:
+        external:
+            name: nginx-proxy
