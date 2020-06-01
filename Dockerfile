@@ -18,6 +18,6 @@ RUN addgroup -g 1993 -S deno \
 
 ENV DENO_DIR /deno-dir/
 
-
+EXPOSE 8000
 ENTRYPOINT ["deno"]
 CMD ["run", "--allow-net", "--allow-read", "server.ts"]

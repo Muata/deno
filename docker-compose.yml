@@ -3,7 +3,10 @@ version: '3.8'
 services:
   deno:
     build: .
-    ports:
-      - 8000:8000
     volumes:
       - ./server.ts:/server.ts
+      - ./public:/public
+networks:
+  default:
+      external:
+        name: nginx-proxy
