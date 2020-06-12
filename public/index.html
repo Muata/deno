@@ -1,59 +1,66 @@
 <!DOCTYPE html>
 <html lang="pl-PL">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>Oglądamy baje</title>
-    <link rel="shortcut icon" href="./assets/favicon.png" />
-    <link rel="stylesheet" href="./styles/css/main.css" />
-    <link href="https://vjs.zencdn.net/7.8.2/video-js.css" rel="stylesheet" />
-    <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
-    <script data-ad-client="ca-pub-4973893437341928" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  </head>
-  <body>
-    <div id="page-wrapper">
-      <div class="container">
-        <div class="video-container">
-          <div id="cartoon-video">
-            <video-js id="video" class="vjs-big-play-centered" controls>
-              <source
-                src="https://ogladamybaje.pl/live/hello.m3u8"
-                type="application/x-mpegURL"
-              />
-            </video-js>
-          </div>
-          <div id="twitch-video">
-            <div id="twitch-video-drag">
-              ○○○
-            </div>
-            <div id="twitch-embed"></div>
-          </div>
-        </div>
-        <div class="chat-container">
-          <iframe
-            frameborder="0"
-            scrolling="yes"
-            src="https://www.twitch.tv/embed/lempiank/chat?darkpopout"
-            id="lempiank"
-          >
-          </iframe>
-        </div>
-      </div>
-    </div>
+	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-79365729-4"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-79365729-4');
+		</script>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<title>Oglądamy baje</title>
+		<link rel="shortcut icon" href="./assets/favicon.png" />
+		<link rel="stylesheet" href="./styles/css/main.css" />
+		<link href="https://vjs.zencdn.net/7.8.2/video-js.css" rel="stylesheet" />
+		<script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+	</head>
+	<body>
+		<div id="page-wrapper">
+			<div class="container">
+				<div class="video-container">
+					<div id="cartoon-video">
+						<video-js id="video" class="vjs-big-play-centered" controls>
+							<source
+								src="http://ogladamybaje.pl/live/hello.m3u8"
+								type="application/x-mpegURL"
+								/>
+						</video-js>
+					</div>
+					<div id="twitch-video">
+						<div id="twitch-video-drag">
+							○○○
+						</div>
+						<div id="twitch-embed"></div>
+					</div>
+				</div>
+				<div class="chat-container">
+					<iframe
+						frameborder="0"
+						scrolling="yes"
+						src="https://www.twitch.tv/embed/lempiank/chat?darkpopout"
+						id="lempiank"
+						>
+					</iframe>
+				</div>
+			</div>
+		</div>
 
-    <script src="https://embed.twitch.tv/embed/v1.js"></script>
-    <script src="https://vjs.zencdn.net/7.8.2/video.js"></script>
-    <script src="https://unpkg.com/@videojs/http-streaming@1.13.3/dist/videojs-http-streaming.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/videojs-hls-source-selector@1.0.1/dist/videojs-http-source-selector.min.js"
-      integrity="sha256-xxQecRTUZiB+WgEIwuuBOZan+jX6Gk0TJs9IZQbPaCE="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/videojs-contrib-quality-levels@2.0.9/dist/videojs-contrib-quality-levels.min.js"
-      integrity="sha256-7SIRBjAQRmcIpHNyA9mGU0t8+CcUPBmUG3zL020hSlw="
-      crossorigin="anonymous"
-    ></script>
-    <script src="./js/main.js"></script>
-  </body>
+		<script src="https://embed.twitch.tv/embed/v1.js"></script>
+		<script src="https://vjs.zencdn.net/7.8.2/video.js"></script>
+		<script src="https://unpkg.com/@videojs/http-streaming@1.13.3/dist/videojs-http-streaming.js"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/videojs-hls-source-selector@1.0.1/dist/videojs-http-source-selector.min.js"
+			integrity="sha256-xxQecRTUZiB+WgEIwuuBOZan+jX6Gk0TJs9IZQbPaCE="
+			crossorigin="anonymous"
+			></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/videojs-contrib-quality-levels@2.0.9/dist/videojs-contrib-quality-levels.min.js"
+			integrity="sha256-7SIRBjAQRmcIpHNyA9mGU0t8+CcUPBmUG3zL020hSlw="
+			crossorigin="anonymous"
+			></script>
+		<script src="./js/main.js"></script>
+	</body>
 </html>
