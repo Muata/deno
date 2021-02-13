@@ -1,5 +1,5 @@
-import { createApp, serveStatic } from "https://servestjs.org/@v1.1.0/mod.ts";
-import { cors } from "https://servestjs.org/@v1.1.0/middleware/cors.ts";
+import { createApp, serveStatic } from "https://servestjs.org/@v1.1.9/mod.ts";
+import { cors } from "https://servestjs.org/@v1.1.9/middleware/cors.ts";
 const app = createApp();
 // All requests will be processed and matched files in "public" directory
 // are served automatically
